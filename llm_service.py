@@ -11,8 +11,15 @@ def validate_meeting(details: dict) -> bool:
     client = get_groq_client()
 
     prompt = f"""
-    Validate the following meeting details.
-    Return only VALID or INVALID.
+    You are validating meeting details.
+
+    Rules:
+    - Date must be in YYYY-MM-DD
+    - Time must be in HH:MM (24-hour format)
+    - Date must be today or in the future
+
+    If valid, respond with ONLY the word VALID.
+    Otherwise respond with ONLY INVALID.
 
     Details:
     {details}
@@ -24,4 +31,7 @@ def validate_meeting(details: dict) -> bool:
         temperature=0
     )
 
-    return response.choices[0].message.content.strip() == "VALID"
+    result = response.choices[0].message.content.strip().upper()
+
+    return "VALID" in result
+
