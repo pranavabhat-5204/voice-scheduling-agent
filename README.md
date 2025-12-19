@@ -17,7 +17,7 @@ o	Optionally provide a meeting title
 5.	When asked for confirmation, say “Yes”.
 6.	The assistant calls the backend API and schedules the meeting.
 You can test if your backend is running smoothly by running:
-curl -X POST https://voice-scheduling-agent.onrender.com/schedule \
+curl -X POST https://your_render_url.com/schedule \
   -H "Content-Type: application/json" \
   -d '{
     "name": "Raghavan",
