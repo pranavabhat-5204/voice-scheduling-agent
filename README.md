@@ -1,7 +1,6 @@
 # voice-scheduling-agent
 A real-time voice assistant that schedules meetings by collecting user details via voice, confirming them, and creating a real calendar event using Google Calendar. The assistant is deployed and accessible via a hosted URL and integrates with a backend API deployed on Render.
 Deployed Application
-Backend API: voice-scheduling-agent.onrender.com
 You will get {"status": "running"}.
 Scheduling endpoint: POST /schedule
 How to Test the Voice Agent
@@ -29,9 +28,4 @@ curl -X POST https://voice-scheduling-agent.onrender.com/schedule \
 
 
 
-Voice assistant testing
- 
-
-Calendar updated
- 
 
